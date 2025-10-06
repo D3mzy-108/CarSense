@@ -2,9 +2,9 @@ import { Car, Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <>
+    <div className="bg-[#233450]">
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-white">
+      <section id="contact" className="py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 place-items-center place-content-center">
             <div>
@@ -59,9 +59,9 @@ export default function Footer() {
             </div>
 
             <div>
-              <div className="bg-gray-800 py-8 px-6 rounded-xl w-fit mx-auto">
+              <div className="bg-black/20 border border-black/40 py-8 px-6 rounded-3xl w-fit mx-auto">
                 <h3 className="text-2xl font-bold mb-8">Pay us a visit!</h3>
-                <div className="w-fit h-fit rounded-lg overflow-hidden mx-auto">
+                <div className="w-fit h-fit rounded-xl overflow-hidden mx-auto shadow">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.4631091547!2d3.119144481049848!3d6.548369368072229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2suk!4v1759782519901!5m2!1sen!2suk"
                     width="320"
@@ -79,7 +79,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-black/20 text-white py-4 border-t-4 border-t-black/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
@@ -93,6 +93,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
