@@ -88,8 +88,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-red-600">Sense</span>
             </div>
             <div className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Precision Auto Care. All rights
-              reserved.
+              © {new Date().getFullYear()} CarSense. All rights reserved.
             </div>
           </div>
         </div>
