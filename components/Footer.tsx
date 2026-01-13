@@ -1,5 +1,7 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
 import { LogoComponent } from "./Logo";
+import Link from "next/link";
+import { FaRegEnvelope, FaWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -18,20 +20,36 @@ export default function Footer() {
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-center">
-                  <Phone className="w-6 h-6 text-blue-400 mr-4" />
-                  <div className="flex-1">
-                    <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-300">(+234) 0803 254 7783</p>
-                  </div>
+                {/* CONTACT INFO */}
+                <div className="w-full py-4 flex flex-wrap gap-8">
+                  <Link target="_blank" href={"https://wa.me/+2348032547783"}>
+                    <div className="w-fit flex gap-3 items-center text-lg">
+                      <div className="p-2 bg-white/10 h-fit rounded-xl">
+                        <FaWhatsapp className="size-8" />
+                      </div>
+                      <span>Whatsapp</span>
+                    </div>
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={"mailto:omoseenifadiya@gmail.com"}
+                  >
+                    <div className="w-fit flex gap-3 text-lg">
+                      <div className="p-2 bg-white/10 h-fit rounded-xl">
+                        <FaRegEnvelope className="size-8" />
+                      </div>
+                      <div className="w-fit flex flex-col pt-2">
+                        <span>Mail:</span>
+                        <span className="text-base">
+                          omoseenifadiya@gmail.com
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-                <div className="flex items-center">
-                  <Mail className="w-6 h-6 text-blue-400 mr-4" />
-                  <div className="flex-1">
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-300">omoseenifadiya@gmail.com</p>
-                  </div>
-                </div>
+
+                {/* ======================= */}
+
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-blue-400 mr-4" />
                   <div className="flex-1">
@@ -63,7 +81,7 @@ export default function Footer() {
                 <h3 className="text-2xl font-bold mb-8">Pay us a visit!</h3>
                 <div className="w-full h-fit rounded-xl overflow-hidden mx-auto shadow">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.4631091547!2d3.119144481049848!3d6.548369368072229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2suk!4v1759782519901!5m2!1sen!2suk"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8620054352255!2d3.302152269636091!3d6.664017854720361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b96d9dcdb6409%3A0x9e3baeb85e55e0cd!2s02%20Karimu%20Alabi%20St%2C%20Aja%2C%20Lagos%20101232%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2suk!4v1768348153781!5m2!1sen!2suk"
                     className="w-full"
                     height="300"
                     style={{ border: 0 }}
@@ -80,8 +98,8 @@ export default function Footer() {
 
       {/* Footer */}
       <footer className="bg-black/20 text-white py-4 border-t-4 border-t-black/40">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-20">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="w-full mx-auto px-2 sm:px-6 lg:px-20">
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
             <div className="w-fit border-r border-r-gray-400 pr-14">
               <LogoComponent />
             </div>
