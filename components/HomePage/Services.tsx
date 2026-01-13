@@ -1,37 +1,94 @@
-import { Car, Wrench } from "lucide-react";
+import {
+  Car,
+  Paintbrush,
+  Wind,
+  Truck,
+  Navigation,
+  Building2,
+  GraduationCap,
+  KeyRound,
+  Users,
+  Settings,
+} from "lucide-react";
 
 export default function Services() {
   const services = [
     {
-      icon: <Wrench className="w-8 h-8" />,
-      title: "General Repairs",
-      description:
-        "Comprehensive vehicle maintenance and repair services for all makes and models.",
+      title: "Air-conditioning",
+      icon: Wind,
+      desc: "Inspection, repair, and re-gas for reliable cooling.",
     },
     {
-      icon: <Car className="w-8 h-8" />,
-      title: "Engine Diagnostics",
-      description:
-        "Advanced diagnostic equipment to quickly identify and resolve engine issues.",
+      title: "Auto-mechatronics",
+      icon: Settings,
+      desc: "Electrical, sensors, and ECU troubleshooting & fixes.",
     },
     {
-      icon: <Wrench className="w-8 h-8" />,
-      title: "Brake Service",
-      description:
-        "Complete brake inspection, pad replacement, and rotor resurfacing services.",
+      title: "Body works",
+      icon: Car,
+      desc: "Panel repairs, dent removal, and body restoration.",
     },
     {
-      icon: <Car className="w-8 h-8" />,
-      title: "Oil Changes",
-      description:
-        "Premium oil and filter changes with complimentary vehicle inspection.",
+      title: "Spray painting",
+      icon: Paintbrush,
+      desc: "Full resprays, touch-ups, and colour matching.",
+    },
+    {
+      title: "Vehicle & parts import",
+      icon: Truck,
+      desc: "Sourcing and importing vehicles and genuine parts.",
+    },
+    {
+      title: "Vehicle sales",
+      icon: Car,
+      desc: "Quality vehicles with transparent inspection history.",
+    },
+    {
+      title: "Vehicle Dealership",
+      icon: Building2,
+      desc: "Dealership support from sourcing to aftersales.",
+    },
+    {
+      title: "Fleet Management",
+      icon: Users,
+      desc: "Maintenance planning, reporting, and cost control.",
+    },
+    {
+      title: "Tracking",
+      icon: Navigation,
+      desc: "Vehicle tracking solutions for safety and visibility.",
+    },
+    {
+      title: "Towing Vehicle",
+      icon: Truck,
+      desc: "Fast and dependable towing and recovery support.",
+    },
+    {
+      title: "Training",
+      icon: GraduationCap,
+      desc: "Practical technical training for teams and individuals.",
+    },
+    {
+      title: "Vehicle lease",
+      icon: KeyRound,
+      desc: "Flexible leasing options for personal and business.",
+    },
+    {
+      title: "Hire Services",
+      icon: Car,
+      desc: "Short and long-term vehicle hire when you need it.",
+    },
+    {
+      title: "Trucking/Haulage services",
+      icon: Truck,
+      desc: "Reliable haulage for goods and logistics needs.",
     },
   ];
 
   return (
     <>
       <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[82.5rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Services
@@ -43,17 +100,17 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {services.map(({ title, icon: Icon, desc }, index) => (
               <div
                 key={index}
                 className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow"
               >
-                <div className="text-blue-600 mb-4">{service.icon}</div>
+                <Icon className="h-6 w-6 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
+                  {title}
                 </h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600">{desc}</p>
               </div>
             ))}
           </div>

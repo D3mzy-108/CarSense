@@ -16,17 +16,17 @@ export default function HeroSection() {
           backgroundColor: "#10182880",
         }}
       >
-        <div className="container px-4 sm:px-6 lg:px-8 text-start max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <div className="container px-4 sm:px-6 lg:px-8 text-start max-w-3xl flex flex-col gap-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Expert Auto Repair & Maintenance
           </h1>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-4 text-blue-100">
             Trusted by thousands of drivers for honest, reliable, and affordable
             automotive services.
           </p>
           <a
             href="#contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+            className="w-fit bg-white text-blue-600 px-10 py-4 rounded-xl hover:bg-gray-100 transition-colors text-center"
           >
             Schedule Service
           </a>
